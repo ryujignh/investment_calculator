@@ -8,7 +8,6 @@ guard :minitest, spring: "bin/rails test", all_on_start: false do
   end
 
   watch(%r{^app/services/(.*?)\.rb$}) do |matches|
-    puts 'asdasd'
     "test/unit/services/#{matches[1]}_test.rb"
   end
   watch(%r{^app/controllers/(.*?)_controller\.rb$}) do |matches|
