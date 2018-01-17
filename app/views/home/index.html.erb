@@ -1,15 +1,21 @@
-<h1>Investment calculator</h1>
-
-<fieldset>
+<div class="container">
+  <h1>Investment calculator</h1>
   <%= form_tag({:controller => 'home', :action => 'calculate'}, :method => :get, :remote => true) do %>
-    <%= number_field_tag('initial_amount') %>
-    <%= number_field_tag('invest_years') %>
-    <%= number_field_tag('return_rate', 6.8) %>
-    <%= submit_tag("calculate", :id => "calculate") %>
+      <div class="form-group col-lg-6 offset-lg-3">
+        <label for="initial_amount" class="control-label">Initial amount</label>
+        <%= number_field_tag('initial_amount', nil, :class => "form-control") %>
+      </div>
+      <div class="form-group col-lg-6 offset-lg-3">
+        <label for="invest_years">Invest years</label>
+        <%= number_field_tag('invest_years', nil, :class => "form-control") %>
+      </div>
+      <div class="form-group col-lg-6 offset-lg-3">
+        <label for="invest_years">Return rate</label>
+        <%= number_field_tag('return_rate', 6.8, :class => "form-control") %>
+      </div>
+      <div class="col-lg-6 offset-lg-3 margin_top">
+        <%= submit_tag("calculate", :id => "calculate", :class => "btn btn-light col-sm-12") %>
+      </div>
   <% end -%>
-
-  <div id="calculation_result">
-    <p></p>
-  </div>
-
-</fieldset>
+  <h1 id="calculation_result"></h1>
+</div>
