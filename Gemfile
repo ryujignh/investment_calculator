@@ -35,6 +35,8 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'bootstrap', '~> 4.0.0.beta3'
 
+gem 'meta-tags'
+
 group :production do
   gem 'pg'
 end
