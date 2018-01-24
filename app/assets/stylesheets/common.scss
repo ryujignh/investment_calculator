@@ -3,8 +3,21 @@ $white: #fff;
 body {
   background-color: #03A9F4;
   color: $white;
+  font-weight: 100;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 100;
+}
+
+p {
+  font-weight: 100;
 }
 
 .margin_top {
   margin-top: 1rem;
+}
+
+.margin_top_large {
+  margin-top: 3rem;
 }

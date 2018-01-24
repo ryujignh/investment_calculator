@@ -7,7 +7,7 @@ module InterestCalculateControllerHelper
     return_rate = params[:return_rate] || 0
 
     future_value = service.calculate(initial_amount, invest_years, return_rate)
-    @future_value_in_words = "If you invest ¥#{initial_amount} and hold it for #{invest_years} years at #{return_rate}% average return rate, your initial investment will become ¥#{future_value}."
+    @future_value_in_words = "If you invest ¥#{initial_amount.to_s.delimited} and hold it for #{invest_years} years with #{return_rate}% average return rate, your investment will be estimated to become ¥#{future_value.to_s.delimited}."
 
     respond_to do |format|
       format.js
